@@ -1,0 +1,23 @@
+<!-- Method 1 -->
+<h1 *ngIf="gotham">
+    Hello World Works
+</h1>
+
+<!-- Method 2 -->
+<div *ngIf="gotham2; else elseBlock">
+    Hello World. It is true.
+</div>
+
+<ng-template #elseBlock>
+    Hello world. It is not true.<br><br>
+</ng-template>
+
+
+<!-- Method 3 -->
+<div *ngIf="loggedin; then user else login"></div>
+
+<ng-template #user>
+    <h1>Welcome User</h1>
+</ng-template>
+
+<ng-template #login>Kindly Login</ng-template>

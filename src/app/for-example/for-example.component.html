@@ -1,0 +1,18 @@
+<p>for-example works!</p>
+<hr>
+
+<!-- <ul>
+    <li *ngFor="let employee of employees;index as i;">
+        {{i+1}} - {{employee.name}}
+    </li>
+</ul> -->
+
+<ul *ngFor="let departmentwise of employees;">
+    <li>{{departmentwise.department}}</li>
+    <ul>
+        <li *ngFor="let employee of departmentwise.employees_name">
+            {{employee.name}}
+        </li>
+    </ul>
+</ul>
+
